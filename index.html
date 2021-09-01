@@ -16,15 +16,15 @@
 <body>
     <div id="corpo">
         <div class="container-md col-6" id="principal">
-            <form>
+            <form method="post" onsubmit="return ( verifica() )" name="frmEnvia">
                 <h1>Cadastre-se</h1>
                 <p>Nome</p>
                 <input type="text" id="nome" class="form-control" placeholder="Informe o seu nome...">
                 <br>
                 <p>E-mail</p>
-                <input type="email" id="email" class="form-control" placeholder="Informe seu e-mail...">
+                <input type="email" id="email" class="form-control" placeholder="Informe seu e-mail..." onblur="checarEmail ();"/>
                 <br>
-                <p>Nome de usúario</p>
+                <p>Usúario</p>
                 <input type="text" id="usuario" class="form-control" placeholder="Informe seu nome de usúario...">
                 <br>
                 <p>Senha</p>
@@ -34,13 +34,13 @@
                 <input type="password" id="confirmacao" class="form-control" placeholder="Confirme sua senha...">
                 <br>
                 <p>CPF</p>
-                <input type="text" id="cpf" class="form-control" onkeypress="mascaraCPF()" placeholder="Informe seu CPF..." maxlength="14">
+                <input type="text" id="cpf" class="form-control" onkeypress="CPF()" placeholder="Informe seu CPF..." maxlength="14">
                 <br>
                 <p>Data de Nascimento</p>
                 <input type="date" id="nascimento" class="form-control">
                 <br>
                 <p>Celular</p>
-                <input type="text" id="celular" class="form-control" onkeypress="mascaraCelular()" placeholder="Informe seu número de celular..." maxlength="14">
+                <input type="text" id="celular" class="form-control" onkeypress="Celular()" placeholder="Informe seu número de celular..." maxlength=" 14">
                 <br>
                 <!-- <div>
                     <label>CEP</label>

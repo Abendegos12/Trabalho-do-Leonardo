@@ -16,7 +16,7 @@ function verificar(){
     }
 }
 
-function mascaraCPF(){
+function CPF(){
     if(cpf.value.length == 3 || cpf.value.length == 7) {
         cpf.value += ".";
     } else if(cpf.value.length == 11) {
@@ -24,7 +24,7 @@ function mascaraCPF(){
     }
 }
 
-function mascaraCelular(){
+function Celular(){
     if(celular.value.length == 0){
         celular.value += "(";
     } else if(celular.value.length == 3){
@@ -33,5 +33,22 @@ function mascaraCelular(){
         celular.value += " ";
     } else if(celular.value.length == 9){
         celular.value += "-";
+    }
+}
+        function verifica() {
+          if (document.forms[0].email.value.length == 0) {
+            alert('Por favor, informe o seu EMAIL.');
+            document.frmEnvia.email.focus();
+            return false;
+          }
+          return true;
+        }
+        function checarEmail(){
+if( document.forms[0].email.value==""
+   || document.forms[0].email.value.indexOf('@')==-1
+     || document.forms[0].email.value.indexOf('.')==-1 )
+    {
+      alert( "Por favor, informe um E-MAIL válido!" );
+      return false;
     }
 }
